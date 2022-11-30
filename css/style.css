@@ -650,7 +650,6 @@ a[x-apple-data-detectors] {
   height: 14px;
 }
 
-
 .contacts-title {
   text-align: center;
   padding: 26px 0 84px;
@@ -660,15 +659,21 @@ a[x-apple-data-detectors] {
   display: flex;
   align-items: center;
   height: 608px;
-  background: pink;
   position: relative;
 }
 
-.contacts-content-parent {
+#map{
+  z-index: 1;
   position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .contacts-content {
+  position: relative;
+  z-index: 2;
   background: #fff;
   border-radius: 0 48px 48px 0;
 }

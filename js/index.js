@@ -6,25 +6,27 @@ $(document).ready(function () {
   const menuTglClsNm = 'show-menu';
   const menuItemTglClsNm = 'active';
 
-
-
   btnMenu.click(function () {
     body.toggleClass(menuTglClsNm);
 
   });
 
   menuItem.click(function (e) {
+    let delay;
+
     if (body.hasClass(menuTglClsNm)) {
       body.removeClass(menuTglClsNm);
-
+      delay = 0;
+    } else {
+      delay = 1000;
     }
-    $(this).addClass(menuItemTglClsNm).siblings().removeClass(menuItemTglClsNm);
 
+    $(this).addClass(menuItemTglClsNm).siblings().removeClass(menuItemTglClsNm);
     const id = '#' + $(this).attr('data-href');
 
     $('html, body').animate({
       scrollTop: $(id).offset().top - $(header).outerHeight()
-    }, 1000);
+    }, delay);
     return false;
   });
 });
