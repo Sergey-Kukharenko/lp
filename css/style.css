@@ -640,6 +640,7 @@ a[x-apple-data-detectors] {
   flex: 1;
   color: #ffffff;
   margin-left: 20px;
+  white-space: nowrap;
 }
 
 .footer-text {

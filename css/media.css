@@ -256,6 +256,10 @@
     margin-top: 2px;
   }
 
+  .footer-list-item-figcaption {
+    white-space: normal;
+  }
+
   .footer-text {
     margin-top: 41px;
   }
@@ -285,7 +289,7 @@
     right: -100%;
     background: black;
     transition: transform 0.3s ease 0s;
-    transform: translateX(0%);
+    transform: translateX(10%);
   }
 
   body.show-menu .drawer {
