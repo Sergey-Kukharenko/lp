@@ -7,11 +7,11 @@ $(document).ready(function () {
   const menuItemTglClsNm = 'active';
 
   btnMenu.click(function () {
-    body.toggleClass(menuTglClsNm);
+    body.toggleClass(menuTglClsNm).parent('html').toggleClass('stop')
   });
 
   menuItem.click(function (e) {
-    if (body.hasClass(menuTglClsNm)) body.removeClass(menuTglClsNm);
+    if (body.hasClass(menuTglClsNm)) body.removeClass(menuTglClsNm).parent('html').removeClass('stop');
     $(this).addClass(menuItemTglClsNm).siblings().removeClass(menuItemTglClsNm);
 
     const id = '#' + $(this).attr('data-href');
