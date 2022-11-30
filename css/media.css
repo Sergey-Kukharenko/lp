@@ -2,6 +2,11 @@
 
   body.show-menu {
     overflow: hidden;
+    block-size: 100%;
+  }
+
+  .show-menu.drawer{
+    touch-action: none;
   }
 
   .title {
@@ -247,14 +252,14 @@
     height: 100vh;
     position: absolute;
     top: 0;
-    right: 0;
+    right: -100%;
     background: black;
     transition: transform 0.3s ease 0s;
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
 
   body.show-menu .drawer {
-    transform: translateX(0%);
+    transform: translateX(-80%);
   }
 
   .button-menu {

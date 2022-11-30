@@ -6,12 +6,20 @@ $(document).ready(function () {
   const menuTglClsNm = 'show-menu';
   const menuItemTglClsNm = 'active';
 
+  const touchScroll = function (event) {
+    event.preventDefault();
+  };
+
   btnMenu.click(function () {
-    body.toggleClass(menuTglClsNm).parent('html').toggleClass('stop')
+    body.toggleClass(menuTglClsNm);
+    // $(this).bind('touchmove', touchScroll);
   });
 
   menuItem.click(function (e) {
-    if (body.hasClass(menuTglClsNm)) body.removeClass(menuTglClsNm).parent('html').removeClass('stop');
+    if (body.hasClass(menuTglClsNm)) {
+      body.removeClass(menuTglClsNm);
+      // $(document).unbind('touchmove', touchScroll);
+    }
     $(this).addClass(menuItemTglClsNm).siblings().removeClass(menuItemTglClsNm);
 
     const id = '#' + $(this).attr('data-href');

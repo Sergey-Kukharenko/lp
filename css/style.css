@@ -10,12 +10,22 @@
     font-family: 'Graphik-Bold-Cy';
 */
 
-html.stop{
-  overflow: hidden;
-}
-
 body {
   font-family: "MyriadProRegular";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
 }
 
 .grid {
@@ -29,7 +39,7 @@ body {
   margin: 0 auto;
 }
 
-.grid-lg{
+.grid-lg {
   max-width: 1002px;
   margin: 0 auto;
 }
@@ -122,6 +132,7 @@ body {
   transition: 0.3s ease 0s;
   border-radius: 5px;
 }
+
 .button-menu span::after,
 .button-menu span::before {
   position: absolute;
@@ -133,21 +144,26 @@ body {
   transition: 0.3s ease 0s;
   border-radius: 5px;
 }
+
 .button-menu span::after {
   top: -7px;
 }
+
 .button-menu span::before {
   bottom: -7px;
 }
+
 .show-menu .button-menu span {
   background-color: transparent;
   transition: 0.3s ease 0s;
 }
+
 .show-menu .button-menu span::after {
   top: 0;
   transform: rotate(45deg);
   transition: 0.3s ease 0s;
 }
+
 .show-menu .button-menu span::before {
   bottom: 0;
   transform: rotate(-45deg);
@@ -161,9 +177,8 @@ body {
 }
 
 .menu-item {
-  text-decoration: none;
-  color: inherit;
   cursor: pointer;
+  user-select: none;
 }
 
 .menu-item-text {
@@ -184,7 +199,7 @@ body {
   opacity: 0;
 }
 
-.menu-item.active .menu-item-text:after {
+.menu-item:hover .menu-item-text:after {
   opacity: 1;
 }
 
@@ -649,7 +664,7 @@ body {
   position: relative;
 }
 
-.contacts-content-parent{
+.contacts-content-parent {
   position: absolute;
 }
 
