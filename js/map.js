@@ -12,9 +12,9 @@ function init() {
       iconContent: '',
     }, {
       // preset: 'islands#icon',
-      // iconLayout: 'default#imageWithContent',
-      // iconImageHref: 'https://sandbox.api.maps.yandex.net/examples/ru/2.1/icon_customImage/images/myIcon.gif',
-      // iconImageSize: [30, 42],
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: './img/icons/logo-inventive.svg',
+      iconImageSize: [70, 70],
       // iconImageOffset: [-5, -38]
     });
   myMap.geoObjects.add(myPlacemark);
